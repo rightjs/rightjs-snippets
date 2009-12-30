@@ -8,8 +8,7 @@ var formHelper = new Class({
   addHints:  function() {
     $$('.add_hints label').each( function(label) {
       var input = $(label.get('for'));
-      var text = label.innerHTML;
-      label.hide();
+      var text = label.hide().innerHTML;
 
       $ext(input, {
         showHint: function() {
