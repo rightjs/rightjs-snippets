@@ -14,12 +14,14 @@
     <%= render @my_stuff %>
   </div>
   
+  // NOTE: you should include your paginator inside the block you will update
+  //            so the paginator got rerendered with new pages
   <div class="ajax-paginate" data-update="that-paginator">
     <%= will_paginate @my_stuff %>
   </div>
 </div>
 
-// in yoru index.html.erb include your template
+// in your index.html.erb include your template
 <%= render :partial => 'that_paginator' %>
 
 
