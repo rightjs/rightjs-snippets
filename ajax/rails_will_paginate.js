@@ -29,10 +29,8 @@
 "div.ajax-paginate a".on('click', function(event) {
   event.stop();
   
-  var link = event.target;
-  
-  new Xhr(link.href, {method: 'get'}).update(
-    link.parent('div.ajax-paginate').get('data-update')
+  new Xhr(this.href, {method: 'get'}).update(
+    $(this).parent('div.ajax-paginate').get('data-update')
   );
 });
 
